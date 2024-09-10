@@ -1,0 +1,13 @@
+UserDto:
+  type: object
+  properties:
+    name:
+      type: string
+    age:
+      type: integer
+    type:
+      type: integer
+  required:
+    - name
+    - age
+    - type
