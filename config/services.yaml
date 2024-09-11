@@ -24,15 +24,5 @@ services:
         resource: '../src/Dto'
         tags: ['controller.service_arguments']
 
-    App\Service\OpenApiSchemaLoader:
-        public: true
-
-    App\EventSubscriber\OpenApiDocumentationSubscriber:
-        arguments:
-            $schemaLoader: '@App\Service\OpenApiSchemaLoader'
-            $logger: '@logger'
-        tags:
-            - { name: 'kernel.event_subscriber' }
-
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
